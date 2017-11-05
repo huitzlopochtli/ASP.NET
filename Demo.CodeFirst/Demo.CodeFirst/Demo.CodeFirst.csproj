@@ -62,6 +62,18 @@
     <Compile Include="Migrations\201711052218142_AddCatagoryToCourses.Designer.cs">
       <DependentUpon>201711052218142_AddCatagoryToCourses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711052224270_AddDatePublishedColumnToCourses.cs" />
+    <Compile Include="Migrations\201711052224270_AddDatePublishedColumnToCourses.Designer.cs">
+      <DependentUpon>201711052224270_AddDatePublishedColumnToCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711052226185_RenameTitleToNameInCourseTable.cs" />
+    <Compile Include="Migrations\201711052226185_RenameTitleToNameInCourseTable.Designer.cs">
+      <DependentUpon>201711052226185_RenameTitleToNameInCourseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711052233272_DeleteDatePublishedInCoursesTable.cs" />
+    <Compile Include="Migrations\201711052233272_DeleteDatePublishedInCoursesTable.Designer.cs">
+      <DependentUpon>201711052233272_DeleteDatePublishedInCoursesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\Catagory.cs" />
@@ -83,6 +95,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711052218142_AddCatagoryToCourses.resx">
       <DependentUpon>201711052218142_AddCatagoryToCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711052224270_AddDatePublishedColumnToCourses.resx">
+      <DependentUpon>201711052224270_AddDatePublishedColumnToCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711052226185_RenameTitleToNameInCourseTable.resx">
+      <DependentUpon>201711052226185_RenameTitleToNameInCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711052233272_DeleteDatePublishedInCoursesTable.resx">
+      <DependentUpon>201711052233272_DeleteDatePublishedInCoursesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
