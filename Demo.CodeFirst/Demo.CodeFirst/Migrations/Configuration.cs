@@ -19,26 +19,26 @@ namespace Demo.CodeFirst.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
 
-            context.Authors.AddOrUpdate(
-               a => a.Name,
-               new Author()
-               {
-                   Name = "Author 1",
-                   Courses = new List<Course>()
-                   {
-                       new Course()
-                       {
-                           Name = "Course1 for Author 1",
-                           Description = "Description"
-                       },
-                       new Course()
-                       {
-                           Name = "Course2 for Author 1",
-                           Description = "Description"
-                       }
-                   }
-               }
-              );
+            //context.Authors.AddOrUpdate(
+            //   a => a.Name,
+            //   new Author()
+            //   {
+            //       Name = "Author 1",
+            //       Courses = new List<Course>()
+            //       {
+            //           new Course()
+            //           {
+            //               Name = "Course1 for Author 1",
+            //               Description = "Description"
+            //           },
+            //           new Course()
+            //           {
+            //               Name = "Course2 for Author 1",
+            //               Description = "Description"
+            //           }
+            //       }
+            //   }
+            //  );
         }
     }
 }

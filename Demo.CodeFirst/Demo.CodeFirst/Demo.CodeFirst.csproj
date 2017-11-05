@@ -82,6 +82,10 @@
     <Compile Include="Migrations\201711052242240_DeleteCatagoriesTable.Designer.cs">
       <DependentUpon>201711052242240_DeleteCatagoriesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711052337171_AddAnnotationToCoursesClass.cs" />
+    <Compile Include="Migrations\201711052337171_AddAnnotationToCoursesClass.Designer.cs">
+      <DependentUpon>201711052337171_AddAnnotationToCoursesClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\Course.cs" />
@@ -117,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711052242240_DeleteCatagoriesTable.resx">
       <DependentUpon>201711052242240_DeleteCatagoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711052337171_AddAnnotationToCoursesClass.resx">
+      <DependentUpon>201711052337171_AddAnnotationToCoursesClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
