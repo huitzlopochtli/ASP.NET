@@ -15,7 +15,6 @@ namespace Demo.CodeFirst.Model
         public float FullPrice { get; set; }
         public Author Author { get; set; }
         public IList<Tag> Tags { get; set; }
-        public Catagory Catagory { get; set; }
     }
 
     public enum CourseLevel

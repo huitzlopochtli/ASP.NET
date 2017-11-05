@@ -74,9 +74,16 @@
     <Compile Include="Migrations\201711052233272_DeleteDatePublishedInCoursesTable.Designer.cs">
       <DependentUpon>201711052233272_DeleteDatePublishedInCoursesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711052240370_DeleteCatagoryColumnFromCoursesTable.cs" />
+    <Compile Include="Migrations\201711052240370_DeleteCatagoryColumnFromCoursesTable.Designer.cs">
+      <DependentUpon>201711052240370_DeleteCatagoryColumnFromCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711052242240_DeleteCatagoriesTable.cs" />
+    <Compile Include="Migrations\201711052242240_DeleteCatagoriesTable.Designer.cs">
+      <DependentUpon>201711052242240_DeleteCatagoriesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Author.cs" />
-    <Compile Include="Model\Catagory.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Tag.cs" />
     <Compile Include="Program.cs" />
@@ -104,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711052233272_DeleteDatePublishedInCoursesTable.resx">
       <DependentUpon>201711052233272_DeleteDatePublishedInCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711052240370_DeleteCatagoryColumnFromCoursesTable.resx">
+      <DependentUpon>201711052240370_DeleteCatagoryColumnFromCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711052242240_DeleteCatagoriesTable.resx">
+      <DependentUpon>201711052242240_DeleteCatagoriesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
