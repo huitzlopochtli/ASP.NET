@@ -54,8 +54,17 @@
     <Compile Include="Migrations\201711052148196_ModelInitialisation.Designer.cs">
       <DependentUpon>201711052148196_ModelInitialisation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711052215218_AddCatagories.cs" />
+    <Compile Include="Migrations\201711052215218_AddCatagories.Designer.cs">
+      <DependentUpon>201711052215218_AddCatagories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711052218142_AddCatagoryToCourses.cs" />
+    <Compile Include="Migrations\201711052218142_AddCatagoryToCourses.Designer.cs">
+      <DependentUpon>201711052218142_AddCatagoryToCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\Catagory.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Tag.cs" />
     <Compile Include="Program.cs" />
@@ -68,6 +77,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201711052148196_ModelInitialisation.resx">
       <DependentUpon>201711052148196_ModelInitialisation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711052215218_AddCatagories.resx">
+      <DependentUpon>201711052215218_AddCatagories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711052218142_AddCatagoryToCourses.resx">
+      <DependentUpon>201711052218142_AddCatagoryToCourses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

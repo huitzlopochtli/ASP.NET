@@ -13,6 +13,7 @@ namespace Demo.CodeFirst
         public DbSet<Course> Courses { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<Catagory> Catagories { get; set; }
 
         public DataAccessContext()
             :base("name=DemoEntityFrameworkCodeFirst")
