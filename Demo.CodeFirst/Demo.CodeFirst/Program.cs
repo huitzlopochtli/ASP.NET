@@ -18,6 +18,10 @@ namespace Demo.CodeFirst
         {
             var context = new DataAccessContext();
 
+            Console.WriteLine("Linq Syntex :"); 
+
+            
+
             //LinQ Syntex
             var query1 =
                 from c in context.Courses
@@ -102,6 +106,101 @@ namespace Demo.CodeFirst
             foreach (var var in query8)
             {
                 Console.WriteLine("{0} ({1})", var.AuthorName, var.CoureName);
+            }
+
+
+
+            //Entension method
+            Console.WriteLine();
+            Console.WriteLine("Entension method : ");
+
+            var query10 = context.Courses
+                .Where(c => c.Level == CourseLevel.Beginner)
+                .OrderByDescending(c =>c.Name)
+                .ThenBy(c => c.Level)
+                .Select(c =>new{CourseName = c.Name, AuthorName = c.Author.Name});
+
+            var query11 = context.Courses
+                .Where(c => c.Level == CourseLevel.Beginner)
+                .OrderByDescending(c => c.Name)
+                .ThenBy(c => c.Level)
+                .Select(c => c.Tags);
+
+            foreach (var c in query11)
+            {
+                foreach (var tag in c)
+                {
+                    Console.WriteLine(tag.Name);
+                }
+            }
+
+            var query12 = context.Courses
+                .Where(c => c.Level == CourseLevel.Beginner)
+                .OrderByDescending(c => c.Name)
+                .ThenBy(c => c.Level)
+                .SelectMany(c => c.Tags)
+                .Distinct();
+
+            foreach (var t in query12)
+            {
+                    Console.WriteLine(t.Name);    
+            }
+
+
+            var query13 = context.Courses
+                .GroupBy(c => c.Level);
+            foreach (var group in query13)
+            {
+                Console.WriteLine(group.Key);
+                foreach (var course in group)
+                {
+                    Console.WriteLine("\t" + course.Name);
+                }
+            }
+
+            
+
+            //InnerJoin
+            var query14 = context.Courses
+                .Join(context.Authors, 
+                c => c.AuthorId, 
+                a => a.Id, 
+                (course, author) => new
+                {
+                    CourseName = course.Name,
+                    AuthorName = author.Name
+                });
+
+            //Group Join
+            var query15 = context.Authors
+                .GroupJoin(context.Courses, a => a.Id, c => c.AuthorId, (author, courses) => new
+                {
+                    AuthorName = author.Name,
+                    Courses = courses
+                });
+
+            foreach (var author in query15)
+            {
+                Console.WriteLine(author.AuthorName);
+                foreach (var course in author.Courses)
+                {
+                    Console.WriteLine("\t" + course.Name);
+                }
+            }
+
+
+            //CrossJoin
+            var query16 = context.Authors
+                .SelectMany(
+                a => context.Courses, 
+                (author, course) => new
+            {
+                AuthorName = author.Name,
+                CourseName = course.Name
+            });
+            foreach (var e in query16)
+            {
+                Console.WriteLine(e.AuthorName +" " + e.CourseName);
             }
 
         }
