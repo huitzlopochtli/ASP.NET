@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Demo.CodeFirst.Model
 {
-    public class Tag
+    public class Cover
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public IList<Course> Courses { get; set; }
+        public Course Course { get; set; }
+
     }
 }

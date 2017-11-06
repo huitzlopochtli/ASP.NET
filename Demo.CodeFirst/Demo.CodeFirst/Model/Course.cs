@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Demo.CodeFirst.Model
 {
-    class Course
+    public class Course
     {
         public int Id { get; set; }
 
@@ -31,6 +31,8 @@ namespace Demo.CodeFirst.Model
         public int AuthorId { get; set; }
 
         public IList<Tag> Tags { get; set; }
+
+        public Cover Cover { get; set; }
 
     }
 

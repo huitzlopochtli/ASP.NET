@@ -86,9 +86,22 @@
     <Compile Include="Migrations\201711052337171_AddAnnotationToCoursesClass.Designer.cs">
       <DependentUpon>201711052337171_AddAnnotationToCoursesClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711060000256_AddedFluentAPI.cs" />
+    <Compile Include="Migrations\201711060000256_AddedFluentAPI.Designer.cs">
+      <DependentUpon>201711060000256_AddedFluentAPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711060007264_ChangeNameOfTagsCoursesToCourseTags.cs" />
+    <Compile Include="Migrations\201711060007264_ChangeNameOfTagsCoursesToCourseTags.Designer.cs">
+      <DependentUpon>201711060007264_ChangeNameOfTagsCoursesToCourseTags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711060013385_AddedCoverTableAndCoverToCourses-f.cs" />
+    <Compile Include="Migrations\201711060013385_AddedCoverTableAndCoverToCourses-f.Designer.cs">
+      <DependentUpon>201711060013385_AddedCoverTableAndCoverToCourses-f.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\Course.cs" />
+    <Compile Include="Model\Cover.cs" />
     <Compile Include="Model\Tag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -124,6 +137,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711052337171_AddAnnotationToCoursesClass.resx">
       <DependentUpon>201711052337171_AddAnnotationToCoursesClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711060000256_AddedFluentAPI.resx">
+      <DependentUpon>201711060000256_AddedFluentAPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711060007264_ChangeNameOfTagsCoursesToCourseTags.resx">
+      <DependentUpon>201711060007264_ChangeNameOfTagsCoursesToCourseTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711060013385_AddedCoverTableAndCoverToCourses-f.resx">
+      <DependentUpon>201711060013385_AddedCoverTableAndCoverToCourses-f.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
