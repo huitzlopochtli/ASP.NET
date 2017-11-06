@@ -203,6 +203,38 @@ namespace Demo.CodeFirst
                 Console.WriteLine(e.AuthorName +" " + e.CourseName);
             }
 
+            Console.Clear();
+
+
+            //Partitioning
+            Console.WriteLine("Partitioning : ");
+            var query17 = context.Courses.Skip(10).Take(10);
+            //foreach (var e in query17)
+            //{
+            //    Console.WriteLine(e.Name);
+            //}
+
+
+
+            //Element Operators
+            Console.WriteLine("Element Operators : ");
+            var query18 = context.Courses.OrderBy(c => c.Level).FirstOrDefault(c =>c.FullPrice > 100);
+            var query19 = context.Courses.SingleOrDefault(c => c.Id == 1);
+
+
+            //Quantifying
+            var aboveAll100 =context.Courses.All(c => c.FullPrice > 10);
+            var isId2Exist = context.Courses.Any(c => c.Id == 2);
+
+
+            //Aggregating
+            var count = context.Courses.Count();
+            var max = context.Courses.Max(c => c.FullPrice);
+            var min = context.Courses.Min(c => c.FullPrice);
+            var avg = context.Courses.Average(c => c.FullPrice);
+
+            var countLevel1 = context.Courses.Count(c => c.Level == CourseLevel.Beginner);
+            //var countLevel1 = context.Courses.Where(c => c.Level == CourseLevel.Beginner).Count();
         }
     }
 }
