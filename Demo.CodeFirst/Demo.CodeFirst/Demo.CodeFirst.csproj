@@ -50,57 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessContext.cs" />
-    <Compile Include="Migrations\201711052148196_ModelInitialisation.cs" />
-    <Compile Include="Migrations\201711052148196_ModelInitialisation.Designer.cs">
-      <DependentUpon>201711052148196_ModelInitialisation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711052215218_AddCatagories.cs" />
-    <Compile Include="Migrations\201711052215218_AddCatagories.Designer.cs">
-      <DependentUpon>201711052215218_AddCatagories.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711052218142_AddCatagoryToCourses.cs" />
-    <Compile Include="Migrations\201711052218142_AddCatagoryToCourses.Designer.cs">
-      <DependentUpon>201711052218142_AddCatagoryToCourses.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711052224270_AddDatePublishedColumnToCourses.cs" />
-    <Compile Include="Migrations\201711052224270_AddDatePublishedColumnToCourses.Designer.cs">
-      <DependentUpon>201711052224270_AddDatePublishedColumnToCourses.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711052226185_RenameTitleToNameInCourseTable.cs" />
-    <Compile Include="Migrations\201711052226185_RenameTitleToNameInCourseTable.Designer.cs">
-      <DependentUpon>201711052226185_RenameTitleToNameInCourseTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711052233272_DeleteDatePublishedInCoursesTable.cs" />
-    <Compile Include="Migrations\201711052233272_DeleteDatePublishedInCoursesTable.Designer.cs">
-      <DependentUpon>201711052233272_DeleteDatePublishedInCoursesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711052240370_DeleteCatagoryColumnFromCoursesTable.cs" />
-    <Compile Include="Migrations\201711052240370_DeleteCatagoryColumnFromCoursesTable.Designer.cs">
-      <DependentUpon>201711052240370_DeleteCatagoryColumnFromCoursesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711052242240_DeleteCatagoriesTable.cs" />
-    <Compile Include="Migrations\201711052242240_DeleteCatagoriesTable.Designer.cs">
-      <DependentUpon>201711052242240_DeleteCatagoriesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711052337171_AddAnnotationToCoursesClass.cs" />
-    <Compile Include="Migrations\201711052337171_AddAnnotationToCoursesClass.Designer.cs">
-      <DependentUpon>201711052337171_AddAnnotationToCoursesClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711060000256_AddedFluentAPI.cs" />
-    <Compile Include="Migrations\201711060000256_AddedFluentAPI.Designer.cs">
-      <DependentUpon>201711060000256_AddedFluentAPI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711060007264_ChangeNameOfTagsCoursesToCourseTags.cs" />
-    <Compile Include="Migrations\201711060007264_ChangeNameOfTagsCoursesToCourseTags.Designer.cs">
-      <DependentUpon>201711060007264_ChangeNameOfTagsCoursesToCourseTags.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711060013385_AddedCoverTableAndCoverToCourses-f.cs" />
-    <Compile Include="Migrations\201711060013385_AddedCoverTableAndCoverToCourses-f.Designer.cs">
-      <DependentUpon>201711060013385_AddedCoverTableAndCoverToCourses-f.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711060022089_ChangeNameOfManyToManyTableKeys.cs" />
-    <Compile Include="Migrations\201711060022089_ChangeNameOfManyToManyTableKeys.Designer.cs">
-      <DependentUpon>201711060022089_ChangeNameOfManyToManyTableKeys.cs</DependentUpon>
+    <Compile Include="Migrations\201711062050539_Initialisation.cs" />
+    <Compile Include="Migrations\201711062050539_Initialisation.Designer.cs">
+      <DependentUpon>201711062050539_Initialisation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model Configuration\CourseConfiguration.cs" />
@@ -116,44 +68,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201711052148196_ModelInitialisation.resx">
-      <DependentUpon>201711052148196_ModelInitialisation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711052215218_AddCatagories.resx">
-      <DependentUpon>201711052215218_AddCatagories.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711052218142_AddCatagoryToCourses.resx">
-      <DependentUpon>201711052218142_AddCatagoryToCourses.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711052224270_AddDatePublishedColumnToCourses.resx">
-      <DependentUpon>201711052224270_AddDatePublishedColumnToCourses.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711052226185_RenameTitleToNameInCourseTable.resx">
-      <DependentUpon>201711052226185_RenameTitleToNameInCourseTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711052233272_DeleteDatePublishedInCoursesTable.resx">
-      <DependentUpon>201711052233272_DeleteDatePublishedInCoursesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711052240370_DeleteCatagoryColumnFromCoursesTable.resx">
-      <DependentUpon>201711052240370_DeleteCatagoryColumnFromCoursesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711052242240_DeleteCatagoriesTable.resx">
-      <DependentUpon>201711052242240_DeleteCatagoriesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711052337171_AddAnnotationToCoursesClass.resx">
-      <DependentUpon>201711052337171_AddAnnotationToCoursesClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711060000256_AddedFluentAPI.resx">
-      <DependentUpon>201711060000256_AddedFluentAPI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711060007264_ChangeNameOfTagsCoursesToCourseTags.resx">
-      <DependentUpon>201711060007264_ChangeNameOfTagsCoursesToCourseTags.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711060013385_AddedCoverTableAndCoverToCourses-f.resx">
-      <DependentUpon>201711060013385_AddedCoverTableAndCoverToCourses-f.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711060022089_ChangeNameOfManyToManyTableKeys.resx">
-      <DependentUpon>201711060022089_ChangeNameOfManyToManyTableKeys.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711062050539_Initialisation.resx">
+      <DependentUpon>201711062050539_Initialisation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
