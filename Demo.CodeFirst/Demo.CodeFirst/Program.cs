@@ -235,6 +235,9 @@ namespace Demo.CodeFirst
 
             var countLevel1 = context.Courses.Count(c => c.Level == CourseLevel.Beginner);
             //var countLevel1 = context.Courses.Where(c => c.Level == CourseLevel.Beginner).Count();
+
+
+
         }
     }
 }
