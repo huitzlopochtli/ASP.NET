@@ -103,6 +103,7 @@
       <DependentUpon>201711060022089_ChangeNameOfManyToManyTableKeys.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model Configuration\CourseConfiguration.cs" />
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Cover.cs" />
