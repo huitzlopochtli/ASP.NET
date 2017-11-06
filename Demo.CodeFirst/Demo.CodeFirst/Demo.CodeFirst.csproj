@@ -54,6 +54,18 @@
     <Compile Include="Migrations\201711062050539_Initialisation.Designer.cs">
       <DependentUpon>201711062050539_Initialisation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711062100566_addValuesInTagsAndAuthorTable.cs" />
+    <Compile Include="Migrations\201711062100566_addValuesInTagsAndAuthorTable.Designer.cs">
+      <DependentUpon>201711062100566_addValuesInTagsAndAuthorTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711062109059_addValuesInCourseTable.cs" />
+    <Compile Include="Migrations\201711062109059_addValuesInCourseTable.Designer.cs">
+      <DependentUpon>201711062109059_addValuesInCourseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711062110330_addValuesInCourseTable1.cs" />
+    <Compile Include="Migrations\201711062110330_addValuesInCourseTable1.Designer.cs">
+      <DependentUpon>201711062110330_addValuesInCourseTable1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model Configuration\CourseConfiguration.cs" />
     <Compile Include="Model\Author.cs" />
@@ -70,6 +82,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201711062050539_Initialisation.resx">
       <DependentUpon>201711062050539_Initialisation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711062100566_addValuesInTagsAndAuthorTable.resx">
+      <DependentUpon>201711062100566_addValuesInTagsAndAuthorTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711062109059_addValuesInCourseTable.resx">
+      <DependentUpon>201711062109059_addValuesInCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711062110330_addValuesInCourseTable1.resx">
+      <DependentUpon>201711062110330_addValuesInCourseTable1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
