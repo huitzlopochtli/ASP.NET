@@ -98,6 +98,10 @@
     <Compile Include="Migrations\201711060013385_AddedCoverTableAndCoverToCourses-f.Designer.cs">
       <DependentUpon>201711060013385_AddedCoverTableAndCoverToCourses-f.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711060022089_ChangeNameOfManyToManyTableKeys.cs" />
+    <Compile Include="Migrations\201711060022089_ChangeNameOfManyToManyTableKeys.Designer.cs">
+      <DependentUpon>201711060022089_ChangeNameOfManyToManyTableKeys.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\Course.cs" />
@@ -146,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711060013385_AddedCoverTableAndCoverToCourses-f.resx">
       <DependentUpon>201711060013385_AddedCoverTableAndCoverToCourses-f.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711060022089_ChangeNameOfManyToManyTableKeys.resx">
+      <DependentUpon>201711060022089_ChangeNameOfManyToManyTableKeys.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
