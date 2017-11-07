@@ -278,11 +278,13 @@ namespace Demo.CodeFirst
 
             Console.Clear();
 
-            //Update delete and changes
+            //insert Update delete and changes
+            //insert
+            
             var course1 = new Course()
             {
-                Name = "New Course",
-                Description = "New Description",
+                Name = "New Course2",
+                Description = "New Description2",
                 FullPrice = 1,
                 Level = CourseLevel.Beginner,
                 //Author = context.Authors.SingleOrDefault(a => a.Name.Equals("Mosh Hamedani"))
@@ -290,10 +292,31 @@ namespace Demo.CodeFirst
                 AuthorId = 1 // for short lived context such as WEB app
             };
 
-            context.Courses.Add(course1);
+            context.Courses.AddOrUpdate(course1);
+            context.SaveChanges();
+            
+            //update
+            
+            var course2 = context.Courses.SingleOrDefault(c => c.Name == "New Course2");
+            course2.Name = "New Name";
+            course2.AuthorId = 2;
+
+            context.SaveChanges();
+            
+
+
+
+            //delete
+            var course3 = context.Courses.SingleOrDefault(c => c.Name == "New Name");
+            context.Courses.Remove(course3);
             context.SaveChanges();
 
 
+                //without Cascade Delete where a value can not be deleted where another one is dependent on the deleted value
+            var author1 = context.Authors.Include(a => a.Courses).SingleOrDefault(a => a.Id == 2);
+            context.Courses.RemoveRange(author1.Courses);
+            context.Authors.Remove(author1);
+            context.SaveChanges();
         }
     }
 }
