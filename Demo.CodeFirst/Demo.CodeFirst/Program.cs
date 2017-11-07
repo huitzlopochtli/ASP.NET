@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -273,6 +274,25 @@ namespace Demo.CodeFirst
             {
                 Console.WriteLine(author.Name);
             }
+
+
+            Console.Clear();
+
+            //Update delete and changes
+            var course1 = new Course()
+            {
+                Name = "New Course",
+                Description = "New Description",
+                FullPrice = 1,
+                Level = CourseLevel.Beginner,
+                //Author = context.Authors.SingleOrDefault(a => a.Name.Equals("Mosh Hamedani"))
+                //if context is already in the application such as WPF apps
+                AuthorId = 1 // for short lived context such as WEB app
+            };
+
+            context.Courses.Add(course1);
+            context.SaveChanges();
+
 
         }
     }
