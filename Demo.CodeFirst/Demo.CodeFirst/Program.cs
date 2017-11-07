@@ -279,44 +279,68 @@ namespace Demo.CodeFirst
             Console.Clear();
 
             //insert Update delete and changes
-            //insert
+            ////insert
+
+            //var course1 = new Course()
+            //{
+            //    Name = "New Course2",
+            //    Description = "New Description2",
+            //    FullPrice = 1,
+            //    Level = CourseLevel.Beginner,
+            //    //Author = context.Authors.SingleOrDefault(a => a.Name.Equals("Mosh Hamedani"))
+            //    //if context is already in the application such as WPF apps
+            //    AuthorId = 1 // for short lived context such as WEB app
+            //};
+
+            //context.Courses.AddOrUpdate(course1);
+            //context.SaveChanges();
+
+            ////update
+
+            //var course2 = context.Courses.SingleOrDefault(c => c.Name == "New Course2");
+            //course2.Name = "New Name";
+            //course2.AuthorId = 2;
+
+            //context.SaveChanges();
+
+
+
+
+            ////delete
+            //var course3 = context.Courses.SingleOrDefault(c => c.Name == "New Name");
+            //context.Courses.Remove(course3);
+            //context.SaveChanges();
+
+
+            //    //without Cascade Delete where a value can not be deleted where another one is dependent on the deleted value
+            //var author1 = context.Authors.Include(a => a.Courses).SingleOrDefault(a => a.Id == 2);
+            //context.Courses.RemoveRange(author1.Courses);
+            //context.Authors.Remove(author1);
+            //context.SaveChanges();
+
+
+            #region ChangeTracker
+            //Add an object
+            context.Authors.Add(new Author() {Name = "New Author"});
+
+            //update an object
+            var authorUpdate = context.Authors.Find(3);
+            authorUpdate.Name = "Update Name";
+
+            //Remove an object
+            var another = context.Authors.Find(4);
+            context.Authors.Remove(another);
+
             
-            var course1 = new Course()
+            //Change tracker
+            var entries = context.ChangeTracker.Entries();
+            foreach (var entry in entries)
             {
-                Name = "New Course2",
-                Description = "New Description2",
-                FullPrice = 1,
-                Level = CourseLevel.Beginner,
-                //Author = context.Authors.SingleOrDefault(a => a.Name.Equals("Mosh Hamedani"))
-                //if context is already in the application such as WPF apps
-                AuthorId = 1 // for short lived context such as WEB app
-            };
-
-            context.Courses.AddOrUpdate(course1);
-            context.SaveChanges();
-            
-            //update
-            
-            var course2 = context.Courses.SingleOrDefault(c => c.Name == "New Course2");
-            course2.Name = "New Name";
-            course2.AuthorId = 2;
-
-            context.SaveChanges();
-            
+                Console.WriteLine(entry.State);
+            }
 
 
-
-            //delete
-            var course3 = context.Courses.SingleOrDefault(c => c.Name == "New Name");
-            context.Courses.Remove(course3);
-            context.SaveChanges();
-
-
-                //without Cascade Delete where a value can not be deleted where another one is dependent on the deleted value
-            var author1 = context.Authors.Include(a => a.Courses).SingleOrDefault(a => a.Id == 2);
-            context.Courses.RemoveRange(author1.Courses);
-            context.Authors.Remove(author1);
-            context.SaveChanges();
+            #endregion
         }
     }
 }
