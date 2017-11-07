@@ -10,6 +10,7 @@ namespace Demo.CodeFirst.Model
 {
     public class Course
     {
+        
         public int Id { get; set; }
 
         [Required]
@@ -30,10 +31,10 @@ namespace Demo.CodeFirst.Model
         [ForeignKey("Author")]
         public int AuthorId { get; set; }
 
-        public IList<Tag> Tags { get; set; }
+        public ICollection<Tag> Tags { get; set; }
 
         public Cover Cover { get; set; }
-
+        
     }
 
     public enum CourseLevel

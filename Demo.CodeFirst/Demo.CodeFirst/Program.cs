@@ -237,6 +237,42 @@ namespace Demo.CodeFirst
             //var countLevel1 = context.Courses.Where(c => c.Level == CourseLevel.Beginner).Count();
 
 
+            //Lazy Loading
+            var courseLazy = context.Courses.Single(c => c.Id == 2);
+            Console.WriteLine(courseLazy.Name); //queries in this section in the database not in the declaration
+            foreach (var tag in courseLazy.Tags)
+            {
+                Console.WriteLine("\t" + tag.Name);
+                //queries in this section in the database not in the declaration
+            }
+
+
+            //EagerLoading
+            var courseEager = context.Courses.Include(c => c.Tags).Include(c => c.Author).SingleOrDefault(c => c.Id==1);
+            //queries in this section in the database in the declaration ahead of time usefull in web app
+            Console.WriteLine(courseEager.Name);
+            foreach (var tag in courseLazy.Tags)
+            {
+                Console.WriteLine("\t" + tag.Name);
+            }
+
+
+
+            //Explicit Loading
+            var courseExplicit = context.Courses.SingleOrDefault(c=>c.Id == 1);
+            context.Authors.Where(a => a.Id == courseExplicit.AuthorId).Load();
+
+            Console.WriteLine(courseExplicit.Author.Name);
+
+
+            var allAuthor = context.Authors.ToList();
+            var allAuthorId = allAuthor.Select(a => a.Id);
+            context.Courses.Where(c => allAuthorId/*allAuthor.Select(a => a.Id)*/.Contains(c.AuthorId) && c.FullPrice == 0).Load();
+
+            foreach (var author in allAuthor)
+            {
+                Console.WriteLine(author.Name);
+            }
 
         }
     }
