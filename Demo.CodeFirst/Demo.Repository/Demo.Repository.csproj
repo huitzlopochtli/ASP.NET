@@ -47,11 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CourseRepository.cs" />
     <Compile Include="Classes\Repository.cs" />
+    <Compile Include="Interfaces\ICourseRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.CodeFirst\Demo.CodeFirst.csproj">
+      <Project>{176F58A7-38BE-4DF0-B34A-7E6C3C0A602D}</Project>
+      <Name>Demo.CodeFirst</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
