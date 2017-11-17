@@ -2,7 +2,7 @@
 
 namespace Demo.Repository.Interfaces
 {
-    public interface IAuthorRepository
+    public interface IAuthorRepository : IRepository<Author>
     {
         Author GetAuthorWithCourses(int id);
     }
