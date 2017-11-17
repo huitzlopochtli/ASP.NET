@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AuthorRepository.cs" />
     <Compile Include="Classes\CourseRepository.cs" />
     <Compile Include="Classes\Repository.cs" />
+    <Compile Include="Interfaces\IAuthorRepository.cs" />
     <Compile Include="Interfaces\ICourseRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
