@@ -319,28 +319,31 @@ namespace Demo.CodeFirst
             //context.SaveChanges();
 
 
-            #region ChangeTracker
-            //Add an object
-            context.Authors.Add(new Author() {Name = "New Author"});
+            //#region ChangeTracker
+            ////Add an object
+            //context.Authors.Add(new Author() {Name = "New Author"});
 
-            //update an object
-            var authorUpdate = context.Authors.Find(3);
-            authorUpdate.Name = "Update Name";
+            ////update an object
+            //var authorUpdate = context.Authors.Find(3);
+            //authorUpdate.Name = "Update Name";
 
-            //Remove an object
-            var another = context.Authors.Find(4);
-            context.Authors.Remove(another);
+            ////Remove an object
+            //var another = context.Authors.Find(4);
+            //context.Authors.Remove(another);
 
             
-            //Change tracker
-            var entries = context.ChangeTracker.Entries();
-            foreach (var entry in entries)
-            {
-                Console.WriteLine(entry.State);
-            }
+            ////Change tracker
+            //var entries = context.ChangeTracker.Entries();
+            //foreach (var entry in entries)
+            //{
+            //    Console.WriteLine(entry.State);
+            //}
 
 
-            #endregion
+            //#endregion
+
+
+
         }
     }
 }

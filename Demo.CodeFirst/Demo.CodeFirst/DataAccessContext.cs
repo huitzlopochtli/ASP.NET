@@ -9,7 +9,7 @@ using Demo.CodeFirst.Model_Configuration;
 
 namespace Demo.CodeFirst
 {
-    class DataAccessContext : DbContext
+    public class DataAccessContext : DbContext
     {
         public DbSet<Course> Courses { get; set; }
         public DbSet<Author> Authors { get; set; }
