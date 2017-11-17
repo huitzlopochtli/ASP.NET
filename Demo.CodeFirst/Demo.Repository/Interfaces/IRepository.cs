@@ -17,6 +17,6 @@ namespace Demo.Repository.Interfaces
         void AddRange(IEnumerable<TEntity> entities);
 
         void Remove(TEntity entity);
-        void RemoveRange(TEntity entities);
+        void RemoveRange(IEnumerable<TEntity> entities);
     }
 }
