@@ -15,8 +15,14 @@ namespace HireAVehicle.DataAccess
         public DbSet<Driver> Drivers { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Moderator> Moderators { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<VehicleType> VehicleTypes { get; set; }
+        public DbSet<Ride> Rides { get; set; }
+        public DbSet<Payment> Payments { get; set; }
+        public DbSet<PaymentType> PaymentTypes { get; set; }
 
-        public SystemContext() : base("name=Hire A Vehicle DB")
+
+        public SystemContext() : base("name=HireAVehicleDB")
         {
             
         }

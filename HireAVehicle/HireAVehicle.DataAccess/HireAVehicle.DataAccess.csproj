@@ -50,6 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201711190906037_Initialization.cs" />
+    <Compile Include="Migrations\201711190906037_Initialization.Designer.cs">
+      <DependentUpon>201711190906037_Initialization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SystemContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,6 +67,11 @@
       <Project>{836eab19-d7a2-439d-9229-384b3c611407}</Project>
       <Name>HireAVehicle.Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711190906037_Initialization.resx">
+      <DependentUpon>201711190906037_Initialization.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
