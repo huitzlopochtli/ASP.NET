@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace HireAVehicle.Entity
 {
@@ -15,11 +17,18 @@ namespace HireAVehicle.Entity
         [RegularExpression(@"[a-zA-Z]{2}[0-9]{7}[a-zA-Z]{2}[0-9]{4}")]
         public string DrivingLicence { get; set; }
         public float TotalEarnings { get; set; }
+        public int TotalRidesDrived { get; set; }
         public bool IsValidated { get; set; }
 
+        public string CurrentLocation { get; set; }
 
-        public Official ValidatedBy { get; set; }
+
+        public Admin ValidatedBy { get; set; }
 
         public Account Account { get; set; }
+
+
+        public bool IsDeleted { get; set; }
+
     }
 }

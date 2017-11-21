@@ -7,11 +7,19 @@ namespace HireAVehicle.Entity
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
         public string VehicleId { get; set; }
 
         [Required]
-        public string Model { get; set; }
+        public string CompanyName { get; set; }
+
+        [Required]
+        public string Color { get; set; }
+
+        [Required]
+        public string ModelName { get; set; }
+
 
         [Required]
         public string RegistrationNumber { get; set; }
@@ -36,14 +44,9 @@ namespace HireAVehicle.Entity
     {
         [Key]
         public int Id { get; set; }
+        
 
         [Required]
-        public string CompanyName { get; set; }
-
-        [Required]
-        public string Color { get; set; }
-
-        [Required]
-        public string ModelName { get; set; }
+        public string VehicleTypeName { get; set; }
     }
 }

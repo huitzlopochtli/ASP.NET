@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HireAVehicle.Core", "HireAVehicle.Core\HireAVehicle.Core.csproj", "{6233727E-8D48-4F67-8093-E71FC7521885}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HireAVehicle.DataAccess", "HireAVehicle.DataAccess\HireAVehicle.DataAccess.csproj", "{13406840-67A9-4E63-AC40-CE9C862B937A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HireAVehicle.Data", "HireAVehicle.DataAccess\HireAVehicle.Data.csproj", "{13406840-67A9-4E63-AC40-CE9C862B937A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HireAVehicle.Repository", "HireAVehicle.Repository\HireAVehicle.Repository.csproj", "{F45965E4-D3FF-4E3F-B1BE-1DF7299DA7F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HireAVehicle.Entity", "HireAVehicle.Entity\HireAVehicle.Entity.csproj", "{836EAB19-D7A2-439D-9229-384B3C611407}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HireAVehicle", "HireAVehicle\HireAVehicle.csproj", "{867CD37B-F98A-4F08-AA17-13A7B7FB43B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HireAVehicle.Core", "HireAVehicle.Core\HireAVehicle.Core.csproj", "{B4B88179-F3D7-412D-A668-C8CC9111128E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6233727E-8D48-4F67-8093-E71FC7521885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6233727E-8D48-4F67-8093-E71FC7521885}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6233727E-8D48-4F67-8093-E71FC7521885}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6233727E-8D48-4F67-8093-E71FC7521885}.Release|Any CPU.Build.0 = Release|Any CPU
 		{13406840-67A9-4E63-AC40-CE9C862B937A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{13406840-67A9-4E63-AC40-CE9C862B937A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13406840-67A9-4E63-AC40-CE9C862B937A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +31,14 @@ Global
 		{836EAB19-D7A2-439D-9229-384B3C611407}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{836EAB19-D7A2-439D-9229-384B3C611407}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{836EAB19-D7A2-439D-9229-384B3C611407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867CD37B-F98A-4F08-AA17-13A7B7FB43B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867CD37B-F98A-4F08-AA17-13A7B7FB43B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867CD37B-F98A-4F08-AA17-13A7B7FB43B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867CD37B-F98A-4F08-AA17-13A7B7FB43B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4B88179-F3D7-412D-A668-C8CC9111128E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B88179-F3D7-412D-A668-C8CC9111128E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B88179-F3D7-412D-A668-C8CC9111128E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B88179-F3D7-412D-A668-C8CC9111128E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

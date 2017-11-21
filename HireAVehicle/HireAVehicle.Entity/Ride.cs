@@ -17,9 +17,20 @@ namespace HireAVehicle.Entity
         public DateTime DropDateTime { get; set; }
         [Required]
         public string DropLocation { get; set; }
+        [Required]
+        public float Distance { get; set; }
 
         public float Amount { get; set; }
 
-        public bool IsPayed { get; set; }
+        public RideStatus RideStatus { get; set; }
+
+        public Review Review { get; set; }
+    }
+
+    public enum RideStatus
+    {
+        Canceled = 0,
+        Completed = 1,
+        Pending = 2
     }
 }

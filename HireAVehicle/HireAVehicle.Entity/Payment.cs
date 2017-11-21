@@ -15,6 +15,8 @@ namespace HireAVehicle.Entity
         }
 
         public PaymentType PaymentType { get; set; }
+
+        public bool IsPayed { get; set; }
     }
 
     public class PaymentType

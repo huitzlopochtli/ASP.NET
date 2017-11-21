@@ -40,7 +40,6 @@ namespace HireAVehicle.Entity
         [DisplayName("Contact No.")]
         public string ContactNo { get; set; }
         public bool RideStatus { get; set; }
-        public int? TotalRides { get; set; }
         public AccountType AccountType { get; set; }
         public bool IsDeleted { get; set; }
 
@@ -58,6 +57,5 @@ namespace HireAVehicle.Entity
         Customer = 1,
         Driver = 2,
         Admin = 3,
-        Moderator = 4
     } 
 }
