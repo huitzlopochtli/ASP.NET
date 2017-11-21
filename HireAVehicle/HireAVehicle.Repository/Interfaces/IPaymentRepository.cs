@@ -7,9 +7,8 @@ using HireAVehicle.Entity;
 
 namespace HireAVehicle.Repository.Interfaces
 {
-    public interface IAccountRepository : IRepository<Account>
+    public interface IPaymentRepository : IRepository<Payment>
     {
-        AccountType Login(string username, string password);
-        void Registration(Account account, Object obj);
+        bool PaymentMethodSelect(Ride ride);
     }
 }

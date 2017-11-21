@@ -31,6 +31,8 @@ namespace HireAVehicle.Entity
     {
         Canceled = 0,
         Completed = 1,
-        Pending = 2
+        Arriving = 2,
+        Started = 3,
+        Failed = 4
     }
 }

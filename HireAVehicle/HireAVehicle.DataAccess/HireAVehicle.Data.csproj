@@ -50,9 +50,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201711211009290_InisilisedAll.cs" />
-    <Compile Include="Migrations\201711211009290_InisilisedAll.Designer.cs">
-      <DependentUpon>201711211009290_InisilisedAll.cs</DependentUpon>
+    <Compile Include="Migrations\201711211057452_InitialisedAll2.cs" />
+    <Compile Include="Migrations\201711211057452_InitialisedAll2.Designer.cs">
+      <DependentUpon>201711211057452_InitialisedAll2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711211146296_InitialisedAll3.cs" />
+    <Compile Include="Migrations\201711211146296_InitialisedAll3.Designer.cs">
+      <DependentUpon>201711211146296_InitialisedAll3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SystemContext.cs" />
@@ -69,8 +73,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201711211009290_InisilisedAll.resx">
-      <DependentUpon>201711211009290_InisilisedAll.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711211057452_InitialisedAll2.resx">
+      <DependentUpon>201711211057452_InitialisedAll2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711211146296_InitialisedAll3.resx">
+      <DependentUpon>201711211146296_InitialisedAll3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

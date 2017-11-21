@@ -10,8 +10,8 @@ namespace HireAVehicle.Entity
 
         public float Amount
         {
-            get => this.Ride.Amount;
-            set => value = this.Ride.Amount;
+            get => Ride.Amount;
+            set => value = Ride.Amount;
         }
 
         public PaymentType PaymentType { get; set; }

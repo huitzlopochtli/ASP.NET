@@ -28,7 +28,14 @@ namespace HireAVehicle.Entity
         public Account Account { get; set; }
 
 
+        public DriverStatus Status { get; set; }
+
         public bool IsDeleted { get; set; }
 
+    }
+    public enum DriverStatus
+    {
+        Vacant = 1,
+        Occupied = 2,
     }
 }

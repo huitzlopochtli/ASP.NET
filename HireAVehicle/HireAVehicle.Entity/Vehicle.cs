@@ -49,4 +49,6 @@ namespace HireAVehicle.Entity
         [Required]
         public string VehicleTypeName { get; set; }
     }
+
+    
 }

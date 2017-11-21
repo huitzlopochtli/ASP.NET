@@ -7,13 +7,13 @@ namespace HireAVehicle.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InisilisedAll : IMigrationMetadata
+    public sealed partial class InitialisedAll2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InisilisedAll));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialisedAll2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201711211009290_InisilisedAll"; }
+            get { return "201711211057452_InitialisedAll"; }
         }
         
         string IMigrationMetadata.Source

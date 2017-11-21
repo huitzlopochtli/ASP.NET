@@ -20,7 +20,7 @@ namespace HireAVehicle.Data
         public DbSet<Payment> Payments { get; set; }
         public DbSet<PaymentType> PaymentTypes { get; set; }
         public DbSet<Review> Reviews { get; set; }
-
+        public DbSet<PromoCode> PromoCodes { get; set; }
 
         public SystemContext() : base("name=HireAVehicleDB")
         {

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HireAVehicle.Entity;
+using HireAVehicle.Repository.Classes;
 
 namespace HireAVehicle.Repository.Interfaces
 {
-    public interface IAccountRepository : IRepository<Account>
+    public interface IAdminRepository : IRepository<Admin>
     {
-        AccountType Login(string username, string password);
-        void Registration(Account account, Object obj);
+        
     }
 }

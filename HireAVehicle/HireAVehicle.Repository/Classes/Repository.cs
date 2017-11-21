@@ -16,11 +16,9 @@ namespace HireAVehicle.Repository.Classes
             Context = context;
         }
 
-
-
-        public TEntity Get(int id)
+        public TEntity GetById(int id)
         {
-            return Context.Set<TEntity>().Find(id);
+            throw new NotImplementedException();
         }
 
         public IEnumerable<TEntity> GetAll()
@@ -46,6 +44,10 @@ namespace HireAVehicle.Repository.Classes
             Context.Set<TEntity>().AddRange(entities);
         }
 
+        public void Update(TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
 
 
         public void Remove(TEntity entity)

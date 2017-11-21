@@ -49,9 +49,15 @@
   <ItemGroup>
     <Compile Include="Classes\Repository.cs" />
     <Compile Include="Interfaces\IAccountRepository.cs" />
+    <Compile Include="Interfaces\IAdminRepository.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
     <Compile Include="Interfaces\IDriverRepository.cs" />
+    <Compile Include="Interfaces\IPaymentRepository.cs" />
+    <Compile Include="Interfaces\IPaymentTypeRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IRideRepository.cs" />
+    <Compile Include="Interfaces\IVehicleRepository.cs" />
+    <Compile Include="Interfaces\IVehicleTypeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -59,6 +65,10 @@
     <ProjectReference Include="..\HireAVehicle.DataAccess\HireAVehicle.Data.csproj">
       <Project>{13406840-67A9-4E63-AC40-CE9C862B937A}</Project>
       <Name>HireAVehicle.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HireAVehicle.Entity\HireAVehicle.Entity.csproj">
+      <Project>{836EAB19-D7A2-439D-9229-384B3C611407}</Project>
+      <Name>HireAVehicle.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
