@@ -47,7 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AccountRepository.cs" />
+    <Compile Include="Classes\AdminRepository.cs" />
+    <Compile Include="Classes\CustomerRepository.cs" />
+    <Compile Include="Classes\DriverRepository.cs" />
+    <Compile Include="Classes\PaymentRepository.cs" />
+    <Compile Include="Classes\PaymentTypeRepository.cs" />
     <Compile Include="Classes\Repository.cs" />
+    <Compile Include="Classes\RideRepository.cs" />
+    <Compile Include="Classes\VehicleRepository.cs" />
+    <Compile Include="Classes\VehicleTypeRepository.cs" />
     <Compile Include="Interfaces\IAccountRepository.cs" />
     <Compile Include="Interfaces\IAdminRepository.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />

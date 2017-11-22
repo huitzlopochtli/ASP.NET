@@ -9,7 +9,7 @@ namespace HireAVehicle.Repository.Interfaces
 {
     public interface ICustomerRepository : IRepository<Customer>
     {
-        Ride RequestRide(string pickUpLocation, string dropLocation);
+        Ride RequestRide(string pickUpLocation, string dropLocation, int id);
         bool CancelRide(Ride ride);
         bool TrackRide(Ride ride);
         bool SubmitReview(Review review);

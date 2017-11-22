@@ -10,6 +10,8 @@ namespace HireAVehicle.Repository.Interfaces
     public interface IAccountRepository : IRepository<Account>
     {
         AccountType Login(string username, string password);
-        void Registration(Account account, Object obj);
+        void Registration(Account account, Customer customer);
+        void Registration(Account account, Driver driver);
+        void Registration(Account account, Admin admin);
     }
 }
