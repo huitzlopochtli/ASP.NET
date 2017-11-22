@@ -9,9 +9,6 @@ namespace HireAVehicle.Entity
     {
         [Key]
         public int Id { get; set; }
-        [Required]
-        [RegularExpression(@"adm-20[0-9]{2}-[0-9]+")]
-        public String AdminId { get; set; }
 
         public ICollection<Driver> DriverValidated { get; set; }
 

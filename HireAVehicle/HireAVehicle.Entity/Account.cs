@@ -14,6 +14,7 @@ namespace HireAVehicle.Entity
         [MaxLength(25)]
         [MinLength(5)]
         [RegularExpression(@"^[a-zA-Z0-9,-_]+$")]
+        [DisplayName("Username")]
         public string UserName { get; set; }
 
         [Required]
@@ -43,9 +44,12 @@ namespace HireAVehicle.Entity
         public AccountType AccountType { get; set; }
         public bool IsDeleted { get; set; }
 
+
+        [Required]
         [NotMapped]
         [DisplayName("First Name")]
         public string FirstName { get; set; }
+        [Required]
         [NotMapped]
         [DisplayName("Last Name")]
         public string LastName { get; set; }
