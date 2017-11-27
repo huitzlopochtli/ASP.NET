@@ -57,7 +57,7 @@ namespace HireAVehicle.Controllers
             accountCustomer.Account.AccountType = AccountType.Customer;
             Account regAccount = accountCustomer.Account;
             Customer regCustomer = accountCustomer.Customer;
-            return View();
+            return RedirectToAction("Login", "Home");
         }
 
         [HttpGet]

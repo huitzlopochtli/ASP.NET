@@ -19,12 +19,12 @@
                 @Html.ActionLink("GoGo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav mr-auto">
+                <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Register as a Customer", "RegistrationCustomer", "Home")</li>
-                    <li>@Html.ActionLink("Become a Driver", "RegistrationDriver", "Home")</li>
-                    <li>@Html.ActionLink("Sign In", "Login", "Home")</li>
+                    <li>@Html.ActionLink("Profile", "Profile", "DriverAccount")</li>
+                    <li>@Html.ActionLink("View All Rides", "ViewAllRides", "DriverAccount")</li>
+                    <li>@Html.ActionLink("Pick a Ride", "SelectRide", "DriverAccount")</li>
+                    <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
                 </ul>
             </div>
         </div>
@@ -42,3 +42,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+

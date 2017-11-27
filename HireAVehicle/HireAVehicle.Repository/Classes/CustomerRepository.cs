@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using HireAVehicle.Data;
+using HireAVehicle.Core;
 using HireAVehicle.Entity;
 using HireAVehicle.Repository.Interfaces;
 
@@ -14,9 +15,23 @@ namespace HireAVehicle.Repository.Classes
         {
         }
 
-        public Ride RequestRide(string pickUpLocation, string dropLocation, int id)
+        public Ride RequestRide(string pickUpLocation, string dropLocation, Customer customer)
         {
-            throw new NotImplementedException();
+            RideAmountCreator rideAmountCreator = new RideAmountCreator(pickUpLocation, dropLocation);
+            rideAmountCreator.setAmountAndDistance();
+
+            Ride ride = new Ride()
+            {
+                PickUpLocation = pickUpLocation,
+                DropLocation = dropLocation,
+                Customer = customer,
+                Distance = rideAmountCreator.Distance,
+                Amount = rideAmountCreator.Expense,
+
+            };
+            RideRepository r1 = new RideRepository(SystemContext);
+            r1.Add(ride);
+            return ride;
         }
 
         public bool CancelRide(Ride ride)

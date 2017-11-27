@@ -71,6 +71,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\HireAVehicle.Core\HireAVehicle.Core.csproj">
+      <Project>{b4b88179-f3d7-412d-a668-c8cc9111128e}</Project>
+      <Name>HireAVehicle.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HireAVehicle.DataAccess\HireAVehicle.Data.csproj">
       <Project>{13406840-67A9-4E63-AC40-CE9C862B937A}</Project>
       <Name>HireAVehicle.Data</Name>
