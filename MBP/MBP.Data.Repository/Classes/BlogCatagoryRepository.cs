@@ -9,7 +9,7 @@ using MVP.Data.Repository;
 
 namespace MBP.Data.Repository.Classes
 {
-    class BlogCatagoryRepository : Repository<BlogCatagory> , IBlogCatagoryRepository
+    public class BlogCatagoryRepository : Repository<BlogCatagory> , IBlogCatagoryRepository
     {
         public BlogCatagoryRepository(DbContext context) : base(context)
         {

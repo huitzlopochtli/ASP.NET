@@ -28,7 +28,7 @@ namespace MBP.Entity
         [ForeignKey("BlogType")]
         public int BlogTypeId { get; set; }
 
-        public virtual ICollection<Comment> Comments { get; set; }
+        public ICollection<Comment> Comments { get; set; }
 
         public DateTime DateTime { get; set; }
 

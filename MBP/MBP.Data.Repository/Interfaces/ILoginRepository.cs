@@ -8,5 +8,6 @@ namespace MBP.Data.Repository.Interfaces
     public interface ILoginRepository : IRepository<Login>
     {
         Login GetLoginByUsernameAndPassword(string username, string password);
+        ICollection<Blog> GetBlogByLogin(string url);
     }
 }
