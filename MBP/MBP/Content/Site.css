@@ -22,3 +22,75 @@ select,
 textarea {
     max-width: 280px;
 }
+.navcustom {
+    background-color: #0033CC;
+    border-color: black;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.article:hover {
+    background-color: #efae14;
+    font-weight: bold;
+}
+
+.article {
+    font-size: large;
+}
+
+.pageSection {
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    background-color: aliceblue;
+}
+
+.leftcolumn, .rightcolumn {
+    border: 1px solid white;
+    float: left;
+    min-height: 25%;
+    color: black;
+}
+
+.leftcolumn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    /*background-color: #111;*/
+}
+
+.rightcolumn {
+    /*        width: 75%;*/
+    background-color: lightyellow;
+}
+
+.tight {
+    margin-top: 20px;
+    padding: 0px;
+}
+
+h3 .tight {
+    display: inline-block;
+    padding: -5px;
+    padding-top: 8px;
+}
+
+.pubDate {
+    font-size: x-small;
+}
+
+.minus-container {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.leftPad {
+    margin-left: 20px;
+}

@@ -185,6 +185,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -202,6 +203,16 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MBP.Entity\MBP.Entity.csproj">
+      <Project>{f3da0741-3af5-43c0-835e-3a8beb85fbd3}</Project>
+      <Name>MBP.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVP.Data\MVP.Data.csproj">
+      <Project>{F1942580-3216-4D06-8102-AFB4AAD65682}</Project>
+      <Name>MVP.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

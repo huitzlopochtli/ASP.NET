@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top navcustom">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -16,13 +16,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("My Personal Blog", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class=@(@ViewBag.SelectedMenu == "home" ? "active" : "")>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class=@(@ViewBag.SelectedMenu == "about" ? "active" : "")>@Html.ActionLink("About", "About", "Home")</li>
+                    <li class=@(@ViewBag.SelectedMenu == "contact" ? "active" : "")>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class=@(@ViewBag.SelectedMenu == "registration" ? "active" : "")>@Html.ActionLink("Sign Up", "Registration", "Home")</li>
+                    <li class=@(@ViewBag.SelectedMenu == "login" ? "active" : "")>@Html.ActionLink("Sign In", "Login", "Home")</li>
                 </ul>
             </div>
         </div>
