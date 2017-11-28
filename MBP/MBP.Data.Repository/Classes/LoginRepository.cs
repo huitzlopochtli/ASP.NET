@@ -14,7 +14,6 @@ namespace MBP.Data.Repository.Classes
         public LoginRepository(DbContext context) : base(context)
         {
         }
-        public BlogDbContext BlogDbContext => Context as BlogDbContext;
 
         public Login GetLoginByUsernameAndPassword(string username, string password)
         {

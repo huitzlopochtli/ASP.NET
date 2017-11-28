@@ -15,8 +15,7 @@ namespace MBP.Data.Repository.Classes
         public UserRepository(DbContext context) : base(context)
         {
         }
-
-        public BlogDbContext BlogDbContext => Context as BlogDbContext;
+        
 
 
         public BlogUserViewModel GetByUrl(string url)

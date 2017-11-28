@@ -16,8 +16,6 @@ namespace MBP.Data.Repository.Classes
 
         }
 
-        public BlogDbContext BlogDbContext => Context as BlogDbContext;
-
         public ICollection<Comment> GetCommentsByBlog(Blog blog)
         {
             List<Comment> comments = BlogDbContext.Comments.Include(c => c.Blog == blog).ToList();

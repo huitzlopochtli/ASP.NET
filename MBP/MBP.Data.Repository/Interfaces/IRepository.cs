@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MBP.Data.Repository.Interfaces
 {
-    public interface IRepository<TEntity> where TEntity : class
+    public interface IRepository<TEntity> : IDisposable where TEntity : class
     {
         TEntity Get(int id);
         IEnumerable<TEntity> GetAll();
@@ -14,6 +14,10 @@ namespace MBP.Data.Repository.Interfaces
         void Add(TEntity entity);
         void AddRange(IEnumerable<TEntity> entities);
 
+        void Update(TEntity entries);
+
+
+        void Remove(int id);
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
 

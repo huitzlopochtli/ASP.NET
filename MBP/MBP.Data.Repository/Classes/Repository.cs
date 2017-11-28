@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using MBP.Data.Repository.Interfaces;
+using MVP.Data.Repository;
 
 namespace MBP.Data.Repository.Classes
 {
@@ -16,7 +17,7 @@ namespace MBP.Data.Repository.Classes
             Context = context;
         }
 
-
+        internal BlogDbContext BlogDbContext => Context as BlogDbContext;
 
         public TEntity Get(int id)
         {
@@ -46,6 +47,17 @@ namespace MBP.Data.Repository.Classes
             Context.Set<TEntity>().AddRange(entities);
         }
 
+        public void Update(TEntity entity)
+        {
+            Context.Set<TEntity>().Attach(entity);
+            Context.Entry(entity).State = EntityState.Modified;
+        }
+
+        public void Remove(int id)
+        {
+            var entity = Get(id);
+            Context.Set<TEntity>().Remove(entity);
+        }
 
 
         public void Remove(TEntity entity)
@@ -61,6 +73,11 @@ namespace MBP.Data.Repository.Classes
         public void Save()
         {
             Context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            Context?.Dispose();
         }
     }
 

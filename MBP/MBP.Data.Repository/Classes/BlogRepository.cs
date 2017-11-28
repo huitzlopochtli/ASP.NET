@@ -14,8 +14,7 @@ namespace MBP.Data.Repository.Classes
         public BlogRepository(DbContext context) : base(context)
         {
         }
-
-        public BlogDbContext BlogDbContext => Context as BlogDbContext;
+        
 
         public Blog GetBuyUrl(string url)
         {

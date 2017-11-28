@@ -13,7 +13,6 @@ namespace MBP.Data.Repository.Classes
         public PermissionRepository(DbContext context) : base(context)
         {
         }
-
-        public BlogDbContext BlogDbContext => Context as BlogDbContext;
+        
     }
 }

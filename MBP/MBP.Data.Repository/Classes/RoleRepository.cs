@@ -13,6 +13,5 @@ namespace MBP.Data.Repository.Classes
         public RoleRepository(DbContext context) : base(context)
         {
         }
-        public BlogDbContext BlogDbContext => Context as BlogDbContext;
     }
 }
